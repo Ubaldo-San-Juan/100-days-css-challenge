@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(94, 118, 138);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 40vh;
+    background-color: rgb(179, 181, 235);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: disappear 3.5s linear infinite;
+
+}
+
+@keyframes disappear {
+    0%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.floor {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(200, 239, 181);
+    top: 64.9%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow {
+    height: 100%;
+    width: 150%;
+    background-color: rgba(40, 44, 47, 0.379);
+    clip-path: polygon(15% 0, 100% 20, 85% 0);
+    animation: shadow 3.5s linear infinite;
+}
+
+@keyframes shadow {
+    0% {
+        clip-path: polygon(15% 0, 100% 20%, 85% 0);
+    }
+    30% {
+        clip-path: polygon(15% 0, 100% 40%, 85% 0);
+    }
+    50% {
+        clip-path: polygon(15% 0, 80% 45%, 85% 0);
+    }
+    100% {
+        clip-path: polygon(15% 0, 0% 50%, 84% 0);
+    }
+}
+
+.piramide {
+    position: absolute;
+    height: 30%;
+    width: 70%;
+    display: flex;
+}
+
+.side-a {
+    background-color: rgb(241, 244, 247);
+    width: 70%;
+    height: 100%;
+    clip-path: polygon(79% 0, 0% 100%, 100% 100%);
+    z-index: 1;
+    animation: change-a 3.5s linear infinite;
+}
+
+@keyframes change-a {
+    0% {
+        background-color: rgb(241, 244, 247);
+    }
+    30% {
+        background-color: rgb(209, 219, 228);
+    }
+    70% {
+        background-color: rgb(209, 219, 228);
+    }
+    100% {
+        background-color: rgb(241, 244, 247);
+    }
+}
+
+.side-b {
+    position: absolute;
+    background-color: rgb(212, 216, 220);
+    height: 100%;
+    width: 70%;
+    clip-path: polygon(36% 0, 0% 100%, 100% 100%);
+    left: 30%;
+    animation: change-b 3.5s linear infinite;
+}
+
+@keyframes change-b {
+    0% {
+        background-color: rgb(212, 216, 220);
+    }
+    30% {
+        background-color: rgb(241, 243, 246);
+    }
+    50% {
+        background-color: rgb(241, 243, 246);
+    }
+    100% {
+        background-color: rgb(252, 252, 252);
+    }
+}
+
+.sun-background {
+    position: absolute;
+    height: 170%;
+    width: 170%;
+    /* background-color: black; */
+    top: 40%;
+    transform: rotate(0deg);
+    animation: rotate 3.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    30% {
+        transform: rotateZ(30deg);
+    }
+    50% {
+        transform: rotateZ(50deg);
+    }
+    100% {
+        transform: rotateZ(90deg);
+    }
+}
+
+.sun {
+    background-color: rgb(235, 235, 22);
+    position: absolute;
+    height: 13%;
+    width: 13%;
+    border-radius: 50%;
+
+}
